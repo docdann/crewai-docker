@@ -1,0 +1,25 @@
+version: '3.8'
+
+services:
+  crewai-app1:
+    build: .
+    environment:
+      - OPENAI_API_BASE=http://host.docker.internal:11434
+      - OPENAI_MODEL_NAME=ollama/llama3.1
+      - OPENAI_API_KEY=ollama
+    deploy:
+      replicas: 3  # You can increase the number of replicas to scale
+
+  crewai-app2:
+    build: .
+    environment:
+      - OPENAI_API_BASE=http://host.docker.internal:11434
+      - OPENAI_MODEL_NAME=ollama/llama3.1
+      - OPENAI_API_KEY=ollama
+
+  crewai-app3:
+    build: .
+    environment:
+      - OPENAI_API_BASE=http://host.docker.internal:11434
+      - OPENAI_MODEL_NAME=ollama/llama3.1
+      - OPENAI_API_KEY=ollama
