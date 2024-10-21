@@ -20,4 +20,4 @@ WORKDIR /app
 COPY . /app
 
 # Command to run your application (adjust as needed)
-CMD ["python", "async_crew.py"]
+CMD ["crewai", "run"]

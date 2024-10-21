@@ -8,3 +8,8 @@ docker run -it --network="host" crewai-app
 ```
 docker build -t crewai-app .
 ```
+
+## MultiCrew Docker Compose
+```
+docker-compose up --force-recreate --remove-orphans
+```
